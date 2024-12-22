@@ -3,50 +3,58 @@ package com.fujarkojar.app;
 import java.util.Arrays;
 
 public class HouseRobber2 {
+
     public static long solveByMemoization(int[] valueInHouse) {
-        long[] dp0 = new long[valueInHouse.length];
-        long[] dp1 = new long[valueInHouse.length];
-        Arrays.fill(dp0, -1);
-        Arrays.fill(dp1, -1);
+        long[][] dp = new long[2][valueInHouse.length];
+        for (long[] a : dp) {
+            Arrays.fill(a, -1);
+        }
         return Math.max(
-                valueInHouse[0] + helper0(valueInHouse, 2, dp0),
-                helper1(valueInHouse, 1, dp1)
-        ) % 1000000007;
+                valueInHouse[0] + helperByMomoization(valueInHouse, 0, 2, dp),
+                helperByMomoization(valueInHouse, 1, 1, dp)
+        );
     }
 
-    // Starts at index 0.
-    private static long helper0(int[] valueInHouse, int ind, long[] dp) {
-        if (ind > valueInHouse.length - 2) {
+    private static long helperByMomoization(int[] valueInHouse, int startInd, int ind, long[][] dp) {
+        if (startInd == 0 && ind > valueInHouse.length - 2) {
             return 0;
         }
-        if (ind == valueInHouse.length - 2) {
-            return valueInHouse[ind];
+        if (startInd == 1 && ind > valueInHouse.length - 1) {
+            return 0;
         }
-        if (dp[ind] != -1) {
-            return dp[ind];
+        // Memoization
+        if (dp[startInd][ind] != -1) {
+            return dp[startInd][ind];
         }
-        dp[ind] = Math.max(
-                valueInHouse[ind] + helper0(valueInHouse, ind + 2, dp), // Taken
-                helper0(valueInHouse, ind + 1, dp) // Not taken
-        ) % 1000000007;
-        return dp[ind];
+        dp[startInd][ind] = Math.max(
+                valueInHouse[ind] + helperByMomoization(valueInHouse, startInd, ind + 2, dp),
+                helperByMomoization(valueInHouse, startInd, ind + 1, dp)
+        );
+        return dp[startInd][ind];
     }
 
-    // Starts at index 1.
-    private static long helper1(int[] valueInHouse, int ind, long[] dp) {
-        if (ind > valueInHouse.length - 1) {
+    public static long solveByTabulation(int[] valueInHouse) {
+        int n = valueInHouse.length;
+
+        if (n == 0) {
             return 0;
         }
-        if (ind == valueInHouse.length - 1) {
-            return valueInHouse[ind];
+        if (n == 1) {
+            return valueInHouse[0];
         }
-        if (dp[ind] != -1) {
-            return dp[ind];
+
+        int[] temp1 = new int[n - 1];
+        int[] temp2 = new int[n - 1];
+        for (int i = 0; i < n; ++i) {
+            if (i > 0) {
+                temp1[i - 1] = valueInHouse[i];
+            }
+            if (i < n - 1) {
+                temp2[i] = valueInHouse[i];
+            }
         }
-        dp[ind] = Math.max(
-                valueInHouse[ind] + helper0(valueInHouse, ind + 2, dp), // Taken
-                helper0(valueInHouse, ind + 1, dp) // Not taken
-        ) % 1000000007;
-        return dp[ind];
+        int ans1 = HouseRobber.solveByTabulation(temp1);
+        int ans2 = HouseRobber.solveByTabulation(temp2);
+        return Math.max(ans1, ans2);
     }
 }
