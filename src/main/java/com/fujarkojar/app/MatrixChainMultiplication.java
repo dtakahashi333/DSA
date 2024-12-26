@@ -33,4 +33,31 @@ public class MatrixChainMultiplication {
 
         return min;
     }
+
+    public static int solveByTabulation(int[] arr, int N) {
+        // Table initialization
+        int[][] dp = new int[N][N];
+        for (int[] a : dp) {
+            Arrays.fill(a, -1);
+        }
+
+        // Base case
+        for (int i = 1; i < N; ++i) {
+            dp[i][i] = 0;
+        }
+
+        for (int l = 1; l < N; ++l) {
+            for (int i = 1; i < N - l; ++i) {
+                int j = i + l;
+                int min = Integer.MAX_VALUE;
+                for (int k = i; k <= j - 1; ++k) {
+                    int steps = arr[i - 1] * arr[k] * arr[j] + dp[i][k] + dp[k + 1][j];
+                    min = Math.min(min, steps);
+                }
+                dp[i][j] = min;
+            }
+        }
+
+        return dp[1][N - 1];
+    }
 }
