@@ -1,4 +1,4 @@
-package com.fujarkojar.app;
+package com.fujarkojar.app.dp;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -12,7 +12,7 @@ class MissingMailTest {
     }
 
     @Test
-    void getMaxExpectedProfitByMemoization1() {
+    void getMaxExpectedProfitByMemoization() {
         int N = 5;
         int[] V = new int[]{10, 2, 8, 6, 4};
         int C = 5;
