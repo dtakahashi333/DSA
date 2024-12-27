@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class LongestCommonSubsequence {
+
     public static int solveByBruteForce(String s, String t) {
         // Get all subsequences recursively from s.
         List<String> sLst = new ArrayList<>();

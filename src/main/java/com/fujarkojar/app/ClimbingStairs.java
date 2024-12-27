@@ -3,13 +3,14 @@ package com.fujarkojar.app;
 import java.util.Arrays;
 
 public class ClimbingStairs {
+
     public static long solveByMemoization(int nStairs) {
         long[] dp = new long[nStairs + 1];
         Arrays.fill(dp, -1);
-        return helper(nStairs, dp);
+        return helperByMemoization(nStairs, dp);
     }
 
-    private static long helper(int ind, long[] dp) {
+    private static long helperByMemoization(int ind, long[] dp) {
         if (ind == 0) {
             return 1;
         }
@@ -19,7 +20,7 @@ public class ClimbingStairs {
         if (dp[ind] != -1) {
             return dp[ind];
         }
-        dp[ind] = (helper(ind - 1, dp) + helper(ind - 2, dp)) % 1000000007;
+        dp[ind] = (helperByMemoization(ind - 1, dp) + helperByMemoization(ind - 2, dp)) % 1000000007;
         return dp[ind];
     }
 

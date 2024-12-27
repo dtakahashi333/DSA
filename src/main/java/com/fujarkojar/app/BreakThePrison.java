@@ -3,6 +3,7 @@ package com.fujarkojar.app;
 import java.util.Arrays;
 
 public class BreakThePrison {
+
     public static int solve(int N, int M, int[] H, int[] V) {
         int[] hori = new int[N + 1];
         int[] vert = new int[M + 1];

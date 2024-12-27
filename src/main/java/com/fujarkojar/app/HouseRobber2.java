@@ -10,12 +10,12 @@ public class HouseRobber2 {
             Arrays.fill(a, -1);
         }
         return Math.max(
-                valueInHouse[0] + helperByMomoization(valueInHouse, 0, 2, dp),
-                helperByMomoization(valueInHouse, 1, 1, dp)
+                valueInHouse[0] + helperByMemoization(valueInHouse, 0, 2, dp),
+                helperByMemoization(valueInHouse, 1, 1, dp)
         );
     }
 
-    private static long helperByMomoization(int[] valueInHouse, int startInd, int ind, long[][] dp) {
+    private static long helperByMemoization(int[] valueInHouse, int startInd, int ind, long[][] dp) {
         if (startInd == 0 && ind > valueInHouse.length - 2) {
             return 0;
         }
@@ -27,8 +27,8 @@ public class HouseRobber2 {
             return dp[startInd][ind];
         }
         dp[startInd][ind] = Math.max(
-                valueInHouse[ind] + helperByMomoization(valueInHouse, startInd, ind + 2, dp),
-                helperByMomoization(valueInHouse, startInd, ind + 1, dp)
+                valueInHouse[ind] + helperByMemoization(valueInHouse, startInd, ind + 2, dp),
+                helperByMemoization(valueInHouse, startInd, ind + 1, dp)
         );
         return dp[startInd][ind];
     }

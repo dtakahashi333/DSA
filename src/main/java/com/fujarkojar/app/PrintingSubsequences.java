@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PrintingSubsequences {
+
     public static void solve(int[] arr) {
         List<Integer> lst = new ArrayList<>();
         helper(arr, 0, lst);

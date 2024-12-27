@@ -3,6 +3,7 @@ package com.fujarkojar.app;
 import java.util.Arrays;
 
 public class SubarrayWithMaximumProduct {
+
     public static int solveByBruteForce(int[] arr) {
         int maxProduct = Integer.MIN_VALUE;
         for (int i = 0; i < arr.length; ++i) {

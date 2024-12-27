@@ -2,45 +2,46 @@ package com.fujarkojar.app;
 
 import java.util.Arrays;
 
+// https://www.naukri.com/code360/problems/house-robber_6211018?interviewProblemRedirection=true&attempt_status=COMPLETED
 public class HouseRobber {
 
     public static int solveByMemoization(int[] houses) {
-        int[] dp = new int[houses.length];
+        int N = houses.length;
+        int[] dp = new int[N];
         Arrays.fill(dp, -1);
-        return helperByMemoization(houses, 0, dp);
+        return helperByMemoization(houses, N - 1, dp);
     }
 
     private static int helperByMemoization(int[] houses, int ind, int[] dp) {
-        if (ind > houses.length - 1) {
+        if (ind < 0) {
             return 0;
+        }
+        if (ind == 0) {
+            return houses[0];
         }
         // Memoization
         if (dp[ind] != -1) {
             return dp[ind];
         }
         dp[ind] = Math.max(
-                houses[ind] + helperByMemoization(houses, ind + 2, dp), // Take
-                helperByMemoization(houses, ind + 1, dp) // Not take
+                houses[ind] + helperByMemoization(houses, ind - 2, dp), // Take
+                helperByMemoization(houses, ind - 1, dp)// Not Take
         ) % 1000000007;
         return dp[ind];
     }
 
     public static int solveByTabulation(int[] houses) {
-        if (houses.length == 0) {
-            return 0;
-        }
-        if (houses.length == 1) {
-            return houses[0];
-        }
-
-        // Tabulation
-        int[] dp = new int[houses.length];
+        int N = houses.length;
+        int[] dp = new int[N];
+        Arrays.fill(dp, -1);
         dp[0] = houses[0];
-        dp[1] = Math.max(houses[0], houses[1]);
-        for (int i = 2; i < houses.length; ++i) {
-            dp[i] = Math.max(houses[i] + dp[i - 2], dp[i - 1]) % 1000000007;
+        for (int i = 1; i < N; ++i) {
+            int curValue = dp[i - 1]; // Not take
+            if (i > 1) {
+                curValue = Math.max(curValue, houses[i] + dp[i - 2]) % 1000000007; // Take
+            }
+            dp[i] = curValue;
         }
-
-        return dp[dp.length - 1];
+        return dp[N - 1];
     }
 }

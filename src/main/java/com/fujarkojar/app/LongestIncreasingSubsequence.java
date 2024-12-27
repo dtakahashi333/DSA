@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class LongestIncreasingSubsequence {
+
     public static int solveByBruteForce(int[] arr) {
         List<Integer> lst = new ArrayList<>();
         return helperByBruteForce(arr, 0, lst);
@@ -31,7 +32,7 @@ public class LongestIncreasingSubsequence {
         return Math.max(left, right);
     }
 
-    public static int solveByMomoization(int[] arr) {
+    public static int solveByMemoization(int[] arr) {
         int[][] dp = new int[arr.length][arr.length + 1];
         for (int[] a : dp) {
             Arrays.fill(a, -1);
@@ -46,7 +47,7 @@ public class LongestIncreasingSubsequence {
         if (dp[ind][prevInd + 1] != -1) {
             return dp[ind][prevInd + 1];
         }
-        int len = 0 + helperByMemoization(arr, ind + 1, prevInd, dp);
+        int len = helperByMemoization(arr, ind + 1, prevInd, dp);
         if (prevInd == -1 || arr[ind] > arr[prevInd]) {
             len = Math.max(len, 1 + helperByMemoization(arr, ind + 1, ind, dp));
         }
