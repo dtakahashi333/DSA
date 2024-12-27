@@ -47,9 +47,9 @@ public class LongestIncreasingSubsequence {
         if (dp[ind][prevInd + 1] != -1) {
             return dp[ind][prevInd + 1];
         }
-        int len = helperByMemoization(arr, ind + 1, prevInd, dp);
+        int len = helperByMemoization(arr, ind + 1, prevInd, dp); // Not take
         if (prevInd == -1 || arr[ind] > arr[prevInd]) {
-            len = Math.max(len, 1 + helperByMemoization(arr, ind + 1, ind, dp));
+            len = Math.max(len, 1 + helperByMemoization(arr, ind + 1, ind, dp)); // Take
         }
         dp[ind][prevInd + 1] = len;
         return len;

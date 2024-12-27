@@ -56,46 +56,38 @@ public class MissingMail {
         }
 
         return maxProfit;
-    }
 
-    public static double getMaxExpectedProfitByMemoization2(int N, int[] V, int C, double S) {
-        double[][] dp = new double[N][2];
-        for (double[] a : dp) {
-            Arrays.fill(a, -1);
-        }
-        double[] benefit = helperByMemoization2(N, V, C, S, N - 1, dp);
-        if (benefit[1] > C) {
-            return benefit[0] + benefit[1] - C;
-        } else {
-            return benefit[0];
-        }
-    }
-
-    private static double[] helperByMemoization2(int N, int[] V, int C, double S, int ind, double[][] dp) {
-        if (ind == 0) { // Base case
-            if (V[ind] - C > 0 && V[ind] - C > V[ind] * (1 - S)) {
-                return new double[]{V[ind] - C, 0};
-            } else {
-                // Pick up the package later.
-                return new double[]{0, V[ind] * (1 - S)};
-            }
-        }
-
-//        if (dp[ind][0] != -1 && dp[ind][1] != -1) {
-//            return dp[ind];
+//        double[] maxProfit = new double[N];
+//        Arrays.fill(maxProfit, Integer.MIN_VALUE);
+//
+//        double[][] dp = new double[N][N];
+//        for (double[] a : dp) {
+//            Arrays.fill(a, -1);
 //        }
-
-        double[] benefit = helperByMemoization2(N, V, C, S, ind - 1, dp);
-        if (V[ind] + benefit[1] > C && V[ind] + benefit[1] - C > (V[ind] + benefit[1]) * (1 - S)) {
-            dp[ind] = new double[]{benefit[0] + benefit[1] + V[ind] - C, 0}; // Take
-        } else {
-            if (ind == N - 1) {
-                dp[ind] = new double[]{benefit[0], V[ind] + benefit[1]}; // Not take
-            } else {
-                dp[ind] = new double[]{benefit[0], (V[ind] + benefit[1]) * (1 - S)}; // Not take
-            }
-        }
-
-        return dp[ind];
+//
+//        // Base case
+//        maxProfit[0] = V[0] - C;
+//        dp[0][0] = V[0];
+//
+//        for (int j = 1; j < N; ++j) {
+//            double carryOver = 0;
+//            for (int i = 0; i < j; ++i) {
+//                dp[i][j] = dp[i][j - 1] * (1 - S);
+//                carryOver += dp[i][j];
+//            }
+//            if (maxProfit[j - 1] < carryOver) {
+//                // To make it a profit, the carry-over needs to be realized.
+//                maxProfit[j] = carryOver + V[j] - C; //
+//            } else {
+//                maxProfit[j] = maxProfit[j - 1];
+//                if (V[j] - C > 0) {
+//                    maxProfit[j] += V[j] - C; // Take
+//                }
+//            }
+//            dp[j][j] = V[j]; // Set a raw value for the future estimation.
+//        }
+//
+//        return Math.max(maxProfit[N - 1], 0);
     }
+
 }
