@@ -35,7 +35,6 @@ public class HouseRobber2 {
 
     public static long solveByTabulation(int[] valueInHouse) {
         int n = valueInHouse.length;
-
         if (n == 0) {
             return 0;
         }

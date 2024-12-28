@@ -32,15 +32,24 @@ public class HouseRobber {
 
     public static int solveByTabulation(int[] houses) {
         int N = houses.length;
+        if (N == 0) {
+            return 0;
+        }
+        if (N == 1) {
+            return houses[0];
+        }
+
+        // Tabulation
         int[] dp = new int[N];
         Arrays.fill(dp, -1);
+
         dp[0] = houses[0];
-        for (int i = 1; i < N; ++i) {
-            int curValue = dp[i - 1]; // Not take
-            if (i > 1) {
-                curValue = Math.max(curValue, houses[i] + dp[i - 2]) % 1000000007; // Take
-            }
-            dp[i] = curValue;
+        dp[1] = Math.max(dp[0], houses[1]);
+        for (int i = 2; i < N; ++i) {
+            dp[i] = Math.max(
+                    dp[i - 1], // Not take
+                    houses[i] + dp[i - 2]
+            ) % 1000000007; // Take
         }
         return dp[N - 1];
     }
