@@ -1,9 +1,8 @@
-package com.fujarkojar.app;
+package com.fujarkojar.app.dp;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class MaxSumIncreasingSubsequenceTest {
 
@@ -21,7 +20,7 @@ class MaxSumIncreasingSubsequenceTest {
         };
         int[] ans = {106, 6, 7};
         for (int i = 0; i < T; ++i) {
-            assertEquals(ans[i], MaxSumIncreasingSubsequence.solveByMemoization(arr[i]));
+            Assertions.assertEquals(ans[i], MaxSumIncreasingSubsequence.solveByMemoization(arr[i]));
         }
     }
 }
