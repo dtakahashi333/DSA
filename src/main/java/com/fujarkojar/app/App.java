@@ -1,5 +1,7 @@
 package com.fujarkojar.app;
 
+import com.fujarkojar.app.dp.LongestIncreasingSubsequence;
+
 /**
  * Hello world!
  */

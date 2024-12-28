@@ -1,4 +1,4 @@
-package com.fujarkojar.app;
+package com.fujarkojar.app.dp;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

@@ -1,6 +1,4 @@
-package com.fujarkojar.app;
-
-import java.util.Arrays;
+package com.fujarkojar.app.dp;
 
 public class SubarrayWithMaximumProduct {
 
