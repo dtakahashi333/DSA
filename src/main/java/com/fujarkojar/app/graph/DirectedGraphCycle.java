@@ -1,7 +1,6 @@
 package com.fujarkojar.app.graph;
 
-import java.util.ArrayList;
-import java.util.Stack;
+import java.util.*;
 
 // https://www.geeksforgeeks.org/problems/detect-cycle-in-a-directed-graph/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=detect-cycle-in-a-directed-graph
 // https://www.youtube.com/watch?v=9twcmtQj4DU&t=1s
@@ -96,5 +95,43 @@ public class DirectedGraphCycle {
         }
 
         return false;
+    }
+
+    public static boolean solveByBFS(int V, ArrayList<ArrayList<Integer>> adj) {
+        // Use Kahn's Algorithm.
+
+        // Initialize
+        int N = adj.size();
+        int[] indegrees = new int[N];
+        Arrays.fill(indegrees, 0);
+
+        for (int i = 0; i < adj.size(); ++i) {
+            for (int j = 0; j < adj.get(i).size(); ++j) {
+                indegrees[adj.get(i).get(j)]++;
+            }
+        }
+
+        Queue<Integer> frontiers = new LinkedList<>();
+        for (int i = 0; i < indegrees.length; ++i) {
+            if (indegrees[i] == 0) {
+                frontiers.add(i);
+            }
+        }
+
+        ArrayList<Integer> result = new ArrayList<>();
+        while (!frontiers.isEmpty()) {
+            int i = frontiers.poll();
+            result.add(i);
+            for (int j = 0; j < adj.get(i).size(); ++j) {
+                int ind = adj.get(i).get(j);
+                indegrees[ind]--;
+                // If the indegree of it becomes zero, put the node into the frontiers.
+                if (indegrees[ind] == 0) {
+                    frontiers.add(ind);
+                }
+            }
+        }
+
+        return result.size() != N;
     }
 }
