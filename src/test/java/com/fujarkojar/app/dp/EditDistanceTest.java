@@ -17,9 +17,11 @@ class EditDistanceTest {
         String[] str1 = {"horse"};
         String[] str2 = {"ros"};
         int[] A = {3};
+        int[] output = new int[T];
         for (int i = 0; i < T; ++i) {
-            assertEquals(A[i], EditDistance.solveByMemoization(str1[i], str2[i]));
+            output[i] = EditDistance.solveByMemoization(str1[i], str2[i]);
         }
+        assertArrayEquals(A, output);
     }
 
     @Test
@@ -28,9 +30,11 @@ class EditDistanceTest {
         String[] str1 = {"abc", "whgtdwhgtdg"};
         String[] str2 = {"dc", "aswcfg"};
         int[] A = {2, 9};
+        int[] output = new int[T];
         for (int i = 0; i < T; ++i) {
-            assertEquals(A[i], EditDistance.solveByMemoization(str1[i], str2[i]));
+            output[i] = EditDistance.solveByMemoization(str1[i], str2[i]);
         }
+        assertArrayEquals(A, output);
     }
 
     @Test
@@ -39,9 +43,11 @@ class EditDistanceTest {
         String[] str1 = {"acdefgd"};
         String[] str2 = {"aawdfg"};
         int[] A = {4};
+        int[] output = new int[T];
         for (int i = 0; i < T; ++i) {
-            assertEquals(A[i], EditDistance.solveByMemoization(str1[i], str2[i]));
+            output[i] = EditDistance.solveByMemoization(str1[i], str2[i]);
         }
+        assertArrayEquals(A, output);
     }
 
     @Test
@@ -50,8 +56,10 @@ class EditDistanceTest {
         String[] str1 = {"wncpoddas"};
         String[] str2 = {"wqegesggfff"};
         int[] A = {10};
+        int[] output = new int[T];
         for (int i = 0; i < T; ++i) {
-            assertEquals(A[i], EditDistance.solveByMemoization(str1[i], str2[i]));
+            output[i] = EditDistance.solveByMemoization(str1[i], str2[i]);
         }
+        assertArrayEquals(A, output);
     }
 }

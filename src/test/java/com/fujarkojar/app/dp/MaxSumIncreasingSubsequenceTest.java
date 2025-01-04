@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+
 class MaxSumIncreasingSubsequenceTest {
 
     @BeforeEach
@@ -19,8 +21,10 @@ class MaxSumIncreasingSubsequenceTest {
                 {4, 1, 2, 4}
         };
         int[] ans = {106, 6, 7};
+        int[] output = new int[T];
         for (int i = 0; i < T; ++i) {
-            Assertions.assertEquals(ans[i], MaxSumIncreasingSubsequence.solveByMemoization(arr[i]));
+            output[i] = MaxSumIncreasingSubsequence.solveByMemoization(arr[i]);
         }
+        assertArrayEquals(ans, output);
     }
 }

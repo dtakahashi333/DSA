@@ -17,9 +17,11 @@ class MatrixChainMultiplicationTest {
         int[] N = {4, 4};
         int[][] arr = {{4, 5, 3, 2}, {10, 15, 20, 25}};
         int[] A = {70, 8000};
+        int[] output = new int[T];
         for (int t = 0; t < T; ++t) {
-            assertEquals(A[t], MatrixChainMultiplication.solveByMemoization(arr[t], N[t]));
+            output[t] = MatrixChainMultiplication.solveByMemoization(arr[t], N[t]);
         }
+        assertArrayEquals(A, output);
     }
 
     @Test
@@ -28,9 +30,11 @@ class MatrixChainMultiplicationTest {
         int[] N = {4};
         int[][] arr = {{1, 4, 3, 2}};
         int[] A = {18};
+        int[] output = new int[T];
         for (int t = 0; t < T; ++t) {
-            assertEquals(A[t], MatrixChainMultiplication.solveByMemoization(arr[t], N[t]));
+            output[t] = MatrixChainMultiplication.solveByMemoization(arr[t], N[t]);
         }
+        assertArrayEquals(A, output);
     }
 
     @Test
@@ -39,9 +43,11 @@ class MatrixChainMultiplicationTest {
         int[] N = {4, 4};
         int[][] arr = {{4, 5, 3, 2}, {10, 15, 20, 25}};
         int[] A = {70, 8000};
+        int[] output = new int[T];
         for (int t = 0; t < T; ++t) {
-            assertEquals(A[t], MatrixChainMultiplication.solveByTabulation(arr[t], N[t]));
+            output[t] = MatrixChainMultiplication.solveByTabulation(arr[t], N[t]);
         }
+        assertArrayEquals(A, output);
     }
 
     @Test
@@ -50,8 +56,10 @@ class MatrixChainMultiplicationTest {
         int[] N = {4};
         int[][] arr = {{1, 4, 3, 2}};
         int[] A = {18};
+        int[] output = new int[T];
         for (int t = 0; t < T; ++t) {
-            assertEquals(A[t], MatrixChainMultiplication.solveByTabulation(arr[t], N[t]));
+            output[t] = MatrixChainMultiplication.solveByTabulation(arr[t], N[t]);
         }
+        assertArrayEquals(A, output);
     }
 }
