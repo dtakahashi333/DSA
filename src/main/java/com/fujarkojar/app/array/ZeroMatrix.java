@@ -1,8 +1,7 @@
-package com.fujarkojar.app;
+package com.fujarkojar.app.array;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class ZeroMatrix {
 
