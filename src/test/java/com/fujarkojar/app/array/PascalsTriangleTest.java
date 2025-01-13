@@ -58,4 +58,48 @@ class PascalsTriangleTest {
         }
         assertIterableEquals(expected, PascalsTriangle.solveByRecursion(numRows));
     }
+
+    @Test
+    void solve2_1() {
+        int numRows = 5;
+        Integer[][] arr = {{1}, {1, 1}, {1, 2, 1}, {1, 3, 3, 1}, {1, 4, 6, 4, 1}};
+        List<List<Integer>> expected = new ArrayList<>();
+        for (Integer[] a : arr) {
+            expected.add(Arrays.asList(a));
+        }
+        assertIterableEquals(expected, PascalsTriangle.solve2(numRows));
+    }
+
+    @Test
+    void solve2_2() {
+        int numRows = 1;
+        Integer[][] arr = {{1}};
+        List<List<Integer>> expected = new ArrayList<>();
+        for (Integer[] a : arr) {
+            expected.add(Arrays.asList(a));
+        }
+        assertIterableEquals(expected, PascalsTriangle.solve2(numRows));
+    }
+
+    @Test
+    void solve3_1() {
+        int numRows = 5;
+        Integer[][] arr = {{1}, {1, 1}, {1, 2, 1}, {1, 3, 3, 1}, {1, 4, 6, 4, 1}};
+        List<List<Integer>> expected = new ArrayList<>();
+        for (Integer[] a : arr) {
+            expected.add(Arrays.asList(a));
+        }
+        assertIterableEquals(expected, PascalsTriangle.solve3(numRows));
+    }
+
+    @Test
+    void solve3_2() {
+        int numRows = 1;
+        Integer[][] arr = {{1}};
+        List<List<Integer>> expected = new ArrayList<>();
+        for (Integer[] a : arr) {
+            expected.add(Arrays.asList(a));
+        }
+        assertIterableEquals(expected, PascalsTriangle.solve3(numRows));
+    }
 }

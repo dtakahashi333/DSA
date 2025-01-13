@@ -48,4 +48,43 @@ public class PascalsTriangle {
         tri.add(curRow);
         return tri;
     }
+
+    // Use a combination formula.
+    public static List<List<Integer>> solve2(int numRows) {
+        List<List<Integer>> tri = new ArrayList<>();
+        for (int i = 0; i < numRows; ++i) {
+            List<Integer> row = new ArrayList<>();
+            for (int j = 0; j <= i; ++j) {
+                row.add(comb(i, j));
+            }
+            tri.add(row);
+        }
+        return tri;
+    }
+
+    private static int comb(int n, int k) {
+        int numer = 1;
+        int denom = 1;
+        for (int i = 0; i < k; ++i) {
+            numer *= (n - i);
+            denom *= (k - i);
+        }
+        return numer / denom;
+    }
+
+    public static List<List<Integer>> solve3(int numRows) {
+        List<List<Integer>> tri = new ArrayList<>();
+        for (int i = 0; i < numRows; ++i) {
+            List<Integer> row = new ArrayList<>();
+            row.add(1);
+            int prev = 1;
+            for (int j = 0; j < i; ++j) {
+                int cur = prev * (i - j) / (j + 1);
+                row.add(cur);
+                prev = cur;
+            }
+            tri.add(row);
+        }
+        return tri;
+    }
 }
