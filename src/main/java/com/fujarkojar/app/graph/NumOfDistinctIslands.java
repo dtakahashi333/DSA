@@ -15,21 +15,20 @@ public class NumOfDistinctIslands {
             Arrays.fill(row, 0);
         }
 
-        HashSet<Integer> counter = new HashSet<>();
+        HashSet<ArrayList<ArrayList<Integer>>> counter = new HashSet<>();
         for (int i = 0; i < n; ++i) {
             for (int j = 0; j < m; ++j) {
                 if (grid[i][j] == 1 && visited[i][j] == 0) {
                     ArrayList<ArrayList<Integer>> path = new ArrayList<>();
                     helper(grid, n, m, i, j, visited, path);
                     ArrayList<Integer> first = path.get(0);
-                    ArrayList<Integer> last = path.get(path.size() - 1);
-                    Integer hash = Arrays.asList(
-                            new Integer[]{
-                                    last.get(0) - first.get(0),
-                                    last.get(1) - first.get(1),
-                                    path.size()
-                            }).hashCode();
-                    counter.add(hash);
+                    for (int k = 0; k < path.size(); ++k) {
+                        ArrayList<Integer> normalized = new ArrayList<>();
+                        normalized.add(path.get(k).get(0) - first.get(0));
+                        normalized.add(path.get(k).get(1) - first.get(1));
+                        path.set(k, normalized);
+                    }
+                    counter.add(path);
                 }
             }
         }
