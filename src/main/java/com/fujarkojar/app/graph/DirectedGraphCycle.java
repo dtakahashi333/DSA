@@ -8,9 +8,9 @@ public class DirectedGraphCycle {
 
     // 1. Cannot use the same algorithm as the one for Undirected.
     // 2. Don't have to track the previous node because unless it is specified (directed) it doesn't go back to the previous node.
-    // 3. Need to evaluate routes from all sources. Reset the color for each source.
+    // 3. Need to evaluate paths from all sources. Reset the color for each source.
     // 4. Distinguish nodes between visited and ones in the queue, "gray" and "black".
-    // 5. Only the routes from the source to the source can be a cycle.
+    // 5. Only the paths from the source to the source can be a cycle.
 
     // The version 1 is a little slower because it iterates all the nodes as a source.
     public static boolean solveByDFS_1(int V, ArrayList<ArrayList<Integer>> adj) {
@@ -102,7 +102,7 @@ public class DirectedGraphCycle {
 
         // Initialize
         int N = adj.size();
-        int[] indegrees = new int[N];
+        int[] indegrees = new int[N]; // The number of incoming edges to a node.
         Arrays.fill(indegrees, 0);
 
         for (int i = 0; i < adj.size(); ++i) {
