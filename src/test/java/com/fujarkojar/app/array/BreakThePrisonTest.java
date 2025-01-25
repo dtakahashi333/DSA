@@ -1,4 +1,4 @@
-package com.fujarkojar.app;
+package com.fujarkojar.app.array;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -18,7 +18,8 @@ class BreakThePrisonTest {
         int M = 4;
         int[] H = new int[]{1, 3, 4};
         int[] V = new int[]{2, 3};
-        assertEquals(9, BreakThePrison.solve(N, M, H, V));
+        int expected = 9;
+        assertEquals(expected, BreakThePrison.solve(N, M, H, V));
     }
 
     @Test
@@ -28,7 +29,8 @@ class BreakThePrisonTest {
         int M = 5;
         int[] H = new int[]{2, 4};
         int[] V = new int[]{1, 4};
-        assertEquals(4, BreakThePrison.solve(N, M, H, V));
+        int expected = 4;
+        assertEquals(expected, BreakThePrison.solve(N, M, H, V));
     }
 
     @Test
@@ -38,6 +40,18 @@ class BreakThePrisonTest {
         int M = 10;
         int[] H = new int[]{1, 2, 3, 4, 6};
         int[] V = new int[]{9};
-        assertEquals(10, BreakThePrison.solve(N, M, H, V));
+        int expected = 10;
+        assertEquals(expected, BreakThePrison.solve(N, M, H, V));
+    }
+
+    @Test
+    void solve4() {
+        // Test case 4
+        int N = 3;
+        int M = 2;
+        int[] H = new int[]{1, 2, 3};
+        int[] V = new int[]{1, 2};
+        int expected = 12;
+        assertEquals(expected, BreakThePrison.solve(N, M, H, V));
     }
 }

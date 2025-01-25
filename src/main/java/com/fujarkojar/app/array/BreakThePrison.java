@@ -1,7 +1,9 @@
-package com.fujarkojar.app;
+package com.fujarkojar.app.array;
 
 import java.util.Arrays;
 
+// Break The Prison
+// https://www.naukri.com/code360/problems/break-the-prison_1755915
 public class BreakThePrison {
 
     public static int solve(int N, int M, int[] H, int[] V) {

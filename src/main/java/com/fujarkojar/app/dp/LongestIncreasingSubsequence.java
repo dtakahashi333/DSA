@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-// Longest Common Subsequence
-// https://www.naukri.com/code360/problems/longest-common-subsequence_624879?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf
-// https://takeuforward.org/dynamic-programming/striver-dp-series-dynamic-programming-problems/
-// https://www.youtube.com/watch?v=ekcwMsSIzVc&list=PLgUwDviBIf0qUlt5H_kiKYaNSqJ81PMMY&index=42
+// Longest Increasing Subsequence
+// https://www.naukri.com/code360/problems/longest-increasing-subsequence_630459?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf
+// https://takeuforward.org/data-structure/longest-increasing-subsequence-dp-41/
+// https://www.youtube.com/watch?v=ekcwMsSIzVc&list=PLgUwDviBIf0qUlt5H_kiKYaNSqJ81PMMY&index=43
 public class LongestIncreasingSubsequence {
 
     public static int solveByBruteForce(int[] arr) {
