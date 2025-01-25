@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class NumOfDistinctIslandsTest {
+class NumberOfDistinctIslandsTest {
 
     @BeforeEach
     void setUp() {
@@ -20,7 +20,7 @@ class NumOfDistinctIslandsTest {
                 {0, 0, 0, 1, 1},
         };
         int expected = 1;
-        assertEquals(expected, NumOfDistinctIslands.solve(grid));
+        assertEquals(expected, NumberOfDistinctIslands.solve(grid));
     }
 
     @Test
@@ -32,7 +32,7 @@ class NumOfDistinctIslandsTest {
                 {1, 1, 0, 1, 1},
         };
         int expected = 3;
-        assertEquals(expected, NumOfDistinctIslands.solve(grid));
+        assertEquals(expected, NumberOfDistinctIslands.solve(grid));
     }
 
     @Test
@@ -81,6 +81,6 @@ class NumOfDistinctIslandsTest {
                 {0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1}
         };
         int expected = 34;
-        assertEquals(expected, NumOfDistinctIslands.solve(grid));
+        assertEquals(expected, NumberOfDistinctIslands.solve(grid));
     }
 }

@@ -4,7 +4,7 @@ import java.util.*;
 
 // Number of Distinct Islands
 // https://www.geeksforgeeks.org/problems/number-of-distinct-islands/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=number-of-distinct-islands
-public class NumOfDistinctIslands {
+public class NumberOfDistinctIslands {
 
     public static int solve(int[][] grid) {
         int n = grid.length;
