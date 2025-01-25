@@ -5,8 +5,10 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
+// Topological sort
 // https://www.geeksforgeeks.org/problems/topological-sort/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=topological-sort
-// https://www.youtube.com/watch?v=iTBaI90lpDQ&list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw&index=15
+// https://takeuforward.org/data-structure/kahns-algorithm-topological-sort-algorithm-bfs-g-22/
+// https://www.youtube.com/watch?v=73sneFXuTEg&list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw&index=14
 public class KahnsAlgorithm {
 
     public static ArrayList<Integer> solve(ArrayList<ArrayList<Integer>> adj) {

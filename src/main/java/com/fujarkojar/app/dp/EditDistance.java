@@ -2,7 +2,10 @@ package com.fujarkojar.app.dp;
 
 import java.util.Arrays;
 
+// Edit Distance
 // https://www.naukri.com/code360/problems/shortest-common-supersequence_4244493?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf
+// https://takeuforward.org/data-structure/edit-distance-dp-33/
+// https://www.youtube.com/watch?v=fJaKO8FbDdo
 public class EditDistance {
 
     public static int solveByMemoization(String str1, String str2) {

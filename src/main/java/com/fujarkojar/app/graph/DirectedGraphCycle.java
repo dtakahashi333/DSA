@@ -2,8 +2,11 @@ package com.fujarkojar.app.graph;
 
 import java.util.*;
 
+// Cycle in a Directed Graph
 // https://www.geeksforgeeks.org/problems/detect-cycle-in-a-directed-graph/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=detect-cycle-in-a-directed-graph
-// https://www.youtube.com/watch?v=9twcmtQj4DU&t=1s
+// https://takeuforward.org/data-structure/detect-a-cycle-in-directed-graph-topological-sort-kahns-algorithm-g-23/
+// https://www.youtube.com/watch?v=9twcmtQj4DU&list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw&index=12
+// https://www.youtube.com/watch?v=iTBaI90lpDQ&list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw&index=15
 public class DirectedGraphCycle {
 
     // 1. Cannot use the same algorithm as the one for Undirected.

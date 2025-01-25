@@ -2,6 +2,10 @@ package com.fujarkojar.app.dp;
 
 import java.util.Arrays;
 
+// Subset Sum Equal To K
+// https://www.naukri.com/code360/problems/subset-sum-equal-to-k_1550954?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf
+// https://takeuforward.org/data-structure/subset-sum-equal-to-target-dp-14/
+// https://www.youtube.com/watch?v=fWX9xDmIzRI&list=PLgUwDviBIf0qUlt5H_kiKYaNSqJ81PMMY&index=15
 public class SubsetSumToK {
 
     public static boolean solveByMemoization(int n, int k, int[] arr) {

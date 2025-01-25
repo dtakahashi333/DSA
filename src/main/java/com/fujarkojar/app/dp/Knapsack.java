@@ -2,6 +2,10 @@ package com.fujarkojar.app.dp;
 
 import java.util.Arrays;
 
+// 0 1 Knapsack
+// https://www.naukri.com/code360/problems/0-1-knapsack_920542?source=youtube&campaign=striver_dp_videos&utm_source=youtube&utm_medium=affiliate&utm_campaign=striver_dp_videos
+// https://takeuforward.org/dynamic-programming/striver-dp-series-dynamic-programming-problems/
+// https://www.youtube.com/watch?v=GqOmJHQZivw&list=PLgUwDviBIf0qUlt5H_kiKYaNSqJ81PMMY&index=20
 public class Knapsack {
 
     public static int solveByMemoization(int[] weight, int[] value, int n, int maxWeight) {

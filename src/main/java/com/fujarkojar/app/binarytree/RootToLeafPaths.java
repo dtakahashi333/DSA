@@ -7,6 +7,8 @@ import java.util.stream.Collectors;
 
 // All Root to Leaf Paths In Binary Tree.
 // https://www.naukri.com/code360/problems/all-root-to-leaf-paths-in-binary-tree._983599?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf
+// https://takeuforward.org/data-structure/print-root-to-node-path-in-a-binary-tree/
+// https://www.youtube.com/watch?v=fmflMqVOC7k&t=1s
 public class RootToLeafPaths {
 
     public static List<String> solve(BinaryTreeNode root) {

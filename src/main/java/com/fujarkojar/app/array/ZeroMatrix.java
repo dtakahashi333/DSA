@@ -3,6 +3,10 @@ package com.fujarkojar.app.array;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+// 73. Set Matrix Zeroes
+// https://leetcode.com/problems/set-matrix-zeroes/description/
+// https://takeuforward.org/data-structure/set-matrix-zero/
+// https://www.youtube.com/watch?v=N0MgLvceX7M
 public class ZeroMatrix {
 
     public static void solve(int[][] matrix) {

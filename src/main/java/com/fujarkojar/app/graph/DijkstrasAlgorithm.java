@@ -8,6 +8,9 @@ import java.util.PriorityQueue;
 // https://www.geeksforgeeks.org/problems/implementing-dijkstra-set-1-adjacency-matrix/0
 // https://takeuforward.org/data-structure/dijkstras-algorithm-using-priority-queue-g-32/
 // https://takeuforward.org/data-structure/dijkstras-algorithm-using-set-g-33/
+// https://www.youtube.com/watch?v=V6H1qAeB-l4&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=32
+// https://www.youtube.com/watch?v=PATgNiuTP20&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=33
+// https://www.youtube.com/watch?v=3dINsjyfooY&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=34
 public class DijkstrasAlgorithm {
 
     public static ArrayList<Integer> solve(ArrayList<ArrayList<iPair>> adj, int src) {

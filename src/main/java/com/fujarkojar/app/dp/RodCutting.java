@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 // Rod cutting problem
 // https://www.naukri.com/code360/problems/rod-cutting-problem_800284?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf&leftPanelTabValue=PROBLEM
+// https://takeuforward.org/dynamic-programming/striver-dp-series-dynamic-programming-problems/
 // https://www.youtube.com/watch?v=mO8XpGoJwuo&t=757s
 public class RodCutting {
 

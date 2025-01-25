@@ -2,6 +2,8 @@ package com.fujarkojar.app.dp;
 
 import java.util.Arrays;
 
+// Max Sum Increasing Subsequence
+// https://www.geeksforgeeks.org/problems/maximum-sum-increasing-subsequence4749/1
 public class MaxSumIncreasingSubsequence {
 
     public static int solveByMemoization(int[] arr) {

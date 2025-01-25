@@ -6,6 +6,9 @@ import java.util.Queue;
 
 // 785. Is Graph Bipartite?
 // https://leetcode.com/problems/is-graph-bipartite/submissions/1514155179/
+// https://takeuforward.org/graph/bipartite-graph-dfs-implementation/
+// https://www.youtube.com/watch?v=KG5YFfR0j8A
+// https://www.youtube.com/watch?v=-vu34sct1g8
 public class BipartiteGraph {
 
     public static boolean solveByDFS(int[][] graph) {

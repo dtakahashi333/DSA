@@ -6,6 +6,8 @@ import java.util.*;
 // https://leetcode.com/problems/maximum-width-of-binary-tree/submissions/1513114356/
 // Maximum Width In Binary Tree
 // https://www.naukri.com/code360/problems/maximum-width-in-binary-tree_763671?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf
+// https://takeuforward.org/data-structure/maximum-width-of-a-binary-tree/
+// https://www.youtube.com/watch?v=ZbybYvcVLks
 public class MaximumWidth {
 
     // Solution for LeetCode

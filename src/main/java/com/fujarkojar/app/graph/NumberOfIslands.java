@@ -2,6 +2,10 @@ package com.fujarkojar.app.graph;
 
 import java.util.Arrays;
 
+// 200. Number of Islands
+// https://leetcode.com/problems/number-of-islands/description/
+// https://www.geeksforgeeks.org/problems/find-the-number-of-islands/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=find_the_number_of_islands
+// https://www.youtube.com/watch?v=muncqlKJrH0&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=8
 public class NumberOfIslands {
 
     public static int solve(char[][] grid) {

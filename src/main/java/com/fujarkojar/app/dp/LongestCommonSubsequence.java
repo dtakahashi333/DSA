@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+// Longest Common Subsequence
+// https://www.naukri.com/code360/problems/longest-common-subsequence_624879?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf
+// https://takeuforward.org/data-structure/longest-common-subsequence-dp-25/
+// https://www.youtube.com/watch?v=NPZn9jBrX8U&list=PLgUwDviBIf0qUlt5H_kiKYaNSqJ81PMMY&index=26
 public class LongestCommonSubsequence {
 
     public static int solveByBruteForce(String s, String t) {

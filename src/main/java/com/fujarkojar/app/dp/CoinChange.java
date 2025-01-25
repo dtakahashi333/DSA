@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 // https://leetcode.com/problems/coin-change/
 // https://www.naukri.com/code360/problems/minimum-elements_3843091?leftPanelTab=1%3Fsource%3Dyoutube&campaign=striver_dpseries&utm_source=youtube&utm_medium=affiliate&utm_campaign=striver_dpseries
+// https://takeuforward.org/data-structure/coin-change-2-dp-22/
 // https://www.youtube.com/watch?v=myPeWb3Y68A&list=PLgUwDviBIf0qUlt5H_kiKYaNSqJ81PMMY&index=21
 public class CoinChange {
 

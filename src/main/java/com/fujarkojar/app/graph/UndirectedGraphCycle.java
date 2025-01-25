@@ -5,7 +5,10 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
+// Undirected Graph Cycle
 // https://www.geeksforgeeks.org/problems/detect-cycle-in-an-undirected-graph/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=detect-cycle-in-an-undirected-graph
+// https://takeuforward.org/data-structure/detect-cycle-in-an-undirected-graph-using-bfs/
+// https://takeuforward.org/data-structure/detect-cycle-in-an-undirected-graph-using-dfs/
 // https://www.youtube.com/watch?v=BPlrALf1LDU
 public class UndirectedGraphCycle {
 

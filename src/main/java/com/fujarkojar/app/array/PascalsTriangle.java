@@ -6,6 +6,8 @@ import java.util.List;
 
 // 118. Pascal's Triangle
 // https://leetcode.com/problems/roman-to-integer/description/
+// https://takeuforward.org/data-structure/program-to-generate-pascals-triangle/
+// https://www.youtube.com/watch?v=bR7mQgwQ_o8&t=6s
 public class PascalsTriangle {
 
     public static List<List<Integer>> solve(int numRows) {

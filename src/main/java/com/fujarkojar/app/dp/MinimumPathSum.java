@@ -2,6 +2,10 @@ package com.fujarkojar.app.dp;
 
 import java.util.Arrays;
 
+// Minimum Path Sum
+// https://www.naukri.com/code360/problems/minimum-path-sum_985349?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf
+// https://takeuforward.org/data-structure/minimum-path-sum-in-a-grid-dp-10/
+// https://www.youtube.com/watch?v=_rgTlyky1uQ&list=PLgUwDviBIf0qUlt5H_kiKYaNSqJ81PMMY&index=11
 public class MinimumPathSum {
 
     public static int solveByMemoization(int[][] grid) {

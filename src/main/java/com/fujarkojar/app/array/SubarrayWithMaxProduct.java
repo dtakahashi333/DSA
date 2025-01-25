@@ -1,6 +1,10 @@
-package com.fujarkojar.app.dp;
+package com.fujarkojar.app.array;
 
-public class SubarrayWithMaximumProduct {
+// Subarray With Maximum Product
+// https://www.naukri.com/code360/problems/subarray-with-maximum-product_6890008?utm_source=striver&utm_medium=website&utm_campaign=codestudio_a_zcourse
+// https://takeuforward.org/data-structure/maximum-product-subarray-in-an-array/
+// https://www.youtube.com/watch?v=hnswaLJvr6g
+public class SubarrayWithMaxProduct {
 
     public static int solveByBruteForce(int[] arr) {
         int maxProduct = Integer.MIN_VALUE;

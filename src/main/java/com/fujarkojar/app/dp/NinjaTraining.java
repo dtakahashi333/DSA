@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 // Ninja’s Training
 // https://www.naukri.com/code360/problems/ninja-s-training_3621003?source=youtube&campaign=striver_dp_videos&utm_source=youtube&utm_medium=affiliate&utm_campaign=striver_dp_videos
+// https://takeuforward.org/data-structure/dynamic-programming-ninjas-training-dp-7/
 // https://www.youtube.com/watch?v=AE39gJYuRog
 public class NinjaTraining {
 

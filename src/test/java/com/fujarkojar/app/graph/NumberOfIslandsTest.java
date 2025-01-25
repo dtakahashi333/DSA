@@ -5,8 +5,6 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-// 200. Number of Islands
-// https://leetcode.com/problems/number-of-islands/description/
 class NumberOfIslandsTest {
 
     @BeforeEach

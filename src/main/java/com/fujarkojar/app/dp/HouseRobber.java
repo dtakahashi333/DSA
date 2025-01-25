@@ -2,7 +2,10 @@ package com.fujarkojar.app.dp;
 
 import java.util.Arrays;
 
+// House Robber
 // https://www.naukri.com/code360/problems/house-robber_6211018?interviewProblemRedirection=true&attempt_status=COMPLETED
+// https://takeuforward.org/data-structure/dynamic-programming-house-robber-dp-6/
+// https://www.youtube.com/watch?v=3WaxQMELSkw&t=1s
 public class HouseRobber {
 
     public static int solveByMemoization(int[] houses) {

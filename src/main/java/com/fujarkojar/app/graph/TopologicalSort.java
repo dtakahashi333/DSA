@@ -4,7 +4,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Stack;
 
+// Topological sort
 // https://www.geeksforgeeks.org/problems/topological-sort/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=topological-sort
+// https://takeuforward.org/data-structure/topological-sort-bfs/
+// https://takeuforward.org/data-structure/topological-sort-using-dfs/
 // https://www.youtube.com/watch?v=5lZ0iJMrUMk&list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw&index=13
 public class TopologicalSort {
 

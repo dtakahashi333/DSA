@@ -6,6 +6,7 @@ import java.util.Stack;
 
 // Strongly Connected
 // https://www.geeksforgeeks.org/problems/strongly-connected-components-kosarajus-algo/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=strongly-connected-components-kosarajus-algo
+// https://takeuforward.org/graph/strongly-connected-components-kosarajus-algorithm-g-54/
 // https://www.youtube.com/watch?v=R6uoSjZ2imo
 public class KosarajusAlgorithm {
 

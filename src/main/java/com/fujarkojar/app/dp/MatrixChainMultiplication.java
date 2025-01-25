@@ -2,6 +2,10 @@ package com.fujarkojar.app.dp;
 
 import java.util.Arrays;
 
+// Matrix Chain Multiplication
+// https://www.naukri.com/code360/problems/matrix-chain-multiplication_975344?source=youtube&campaign=striver_dp_videos&utm_source=youtube&utm_medium=affiliate&utm_campaign=striver_dp_videos
+// https://takeuforward.org/dynamic-programming/matrix-chain-multiplication-dp-48/
+// https://www.youtube.com/watch?v=vRVfmbCFW7Y
 public class MatrixChainMultiplication {
 
     public static int solveByMemoization(int[] arr, int N) {
