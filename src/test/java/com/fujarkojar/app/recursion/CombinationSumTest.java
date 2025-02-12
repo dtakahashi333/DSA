@@ -3,10 +3,7 @@ package com.fujarkojar.app.recursion;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -36,17 +33,24 @@ class CombinationSumTest {
     }
 
     private void sortArray2D(int[][] arr) {
+        // Sort contents of each array.
+        for (int[] a : arr) {
+            Arrays.sort(a);
+        }
         // Sorting the 2D array lexicographically based on the inner arrays' elements
         Arrays.sort(arr, new Comparator<int[]>() {
             @Override
             public int compare(int[] a, int[] b) {
                 // Compare lexicographically by using Arrays.compare
-                return Arrays.compare(a, b);
+                for (int i = 0; i < Math.min(a.length, b.length); ++i) {
+                    int comparison = Integer.compare(a[i], b[i]);
+                    if (comparison != 0) {
+                        return comparison;
+                    }
+                }
+                return Integer.compare(a.length, b.length);
             }
         });
-        for (int[] a : arr) {
-            Arrays.sort(a);
-        }
     }
 
     @BeforeEach
