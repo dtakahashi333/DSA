@@ -61,4 +61,15 @@ public class UniquePaths {
         }
         return dp[m][n];
     }
+
+    public static int solveByCombination(int m, int n) {
+        // Use math.
+        int N = (m - 1) + (n - 1);
+        int K = Math.min(m - 1, n - 1);
+        double result = 1;
+        for (int i = 1; i <= K; ++i) {
+            result = result * (N - i + 1) / i;
+        }
+        return (int) result;
+    }
 }
