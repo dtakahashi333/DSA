@@ -25,7 +25,7 @@ public class SearchInRotatedSortedArray {
 
         if (k < arr.get(m)) {
             if (arr.get(i) < arr.get(m)) {
-                        if (arr.get(i) <= k) {
+                if (arr.get(i) <= k) {
                     return helper(arr, n, k, i, m - 1);
                 } else {
                     return helper(arr, n, k, m + 1, j);
